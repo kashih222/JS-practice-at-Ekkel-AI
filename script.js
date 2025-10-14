@@ -479,4 +479,16 @@
 
 
 
-
+let word = "ili";
+function checkPalindrome() {
+    let myReverseVal = word.toString().split("").reverse().join("");
+    let myStringValue = word.toString();
+    console.log(myStringValue);
+    console.log( myReverseVal);
+    if(myReverseVal == myStringValue){
+        console.log("This Word is palindrome");
+    }else{
+        console.log("This word is not a plaindrome word");
+    }
+}
+checkPalindrome();
