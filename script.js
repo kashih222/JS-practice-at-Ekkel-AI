@@ -9,6 +9,8 @@
 
 
 
+
+
 // let colors = ["red","green","blue"];
 
 // colors.shift();
@@ -510,31 +512,52 @@
 // =====================================================================================>
 // =====================================================================================>
 
-// #DOM Manipulation
-let h1 =document.querySelector("h1");
-h1.innerText = "i am changes throgh DOM Manipulation";
+// // #DOM Manipulation
+// let h1 =document.querySelector("h1");
+// h1.innerText = "i am changes throgh DOM Manipulation";
+// console.dir(h1);
+
+// let p = document.querySelector("p");
+// p.innerHTML="<h2>changes lorem to heading 2</h2>";
+
+// let a = document.querySelector("a");
+// a.href="https://github.com/kashih222";
+// console.dir(a);
+
+
+// let h3 = document.createElement("h3");
+// h3.innerText="Hi am Created by js";
+// console.log(h3);
+// document.querySelector("body").prepend(h3);
+
+
+// //h1 already selected above so i cannt redeclared.
+// //add a class using js and add styling on this class
+// h1.classList.toggle("heading");
+// //using this we can remove the class.
+// // h1.classList.remove("heading")
+
+
+
+// //#Practice Questions on Dom Manipoulation.
+
+
+// // //#Change text content & Change the style using JS.
+// let mesg = document.getElementById("msg");
+// mesg.innerText = ("Hello, Dom!");
+// mesg.style.color = "red";
+// mesg.style.backgroundColor= "pink";
+
+
+
+// //#Add a class
+// let ptag = document.querySelector("p");
+// ptag.classList.add("pera-style");
+
+
+
+// #Create & append element
+let h1 = document.createElement("h1");
+h1.innerText="i am example of append child"
 console.dir(h1);
-
-let p = document.querySelector("p");
-p.innerHTML="<h2>changes lorem to heading 2</h2>";
-
-let a = document.querySelector("a");
-a.href="https://github.com/kashih222";
-console.dir(a);
-
-
-let h3 = document.createElement("h3");
-h3.innerText="Hi am Created by js";
-console.log(h3);
-document.querySelector("body").prepend(h3);
-
-
-//h1 already selected above so i cannt redeclared.
-//add a class using js and add styling on this class
-h1.classList.toggle("heading");
-//using this we can remove the class.
-// h1.classList.remove("heading")
-
-
-
-
+document.body.appendChild(h1);
