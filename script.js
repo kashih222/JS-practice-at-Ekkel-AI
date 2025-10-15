@@ -591,18 +591,46 @@
 
 
 
+// // # show and hide the div on the btn click
+// let main = document.querySelector(".main");
+// let insidemain = document.querySelector(".inside-main");
+// let btnshowhide = document.querySelector(".show-hide-btn");
 
-let main = document.querySelector(".main");
-let insidemain = document.querySelector(".inside-main");
-let btnshowhide = document.querySelector(".show-hide-btn");
+// btnshowhide.addEventListener("click", function showhide() {
+//   // Toggle visibility
+//   if (insidemain.style.display === "none") {
+//     insidemain.style.display = "block";
+//   } else {
+//     insidemain.style.display = "none";
+//   }
+// });
 
-btnshowhide.addEventListener("click", function showhide() {
-  // Toggle visibility
-  if (insidemain.style.display === "none") {
-    insidemain.style.display = "block";
-  } else {
-    insidemain.style.display = "none";
-  }
-});
 
+// // #input add event listner 
+// let input = document.querySelector("input");
+// input.addEventListener("input", function inputlistner(dets){
+//     if (dets.data !== null) {
+//         console.log(dets.data)
+//     }
+// })
+
+
+// // #change add event listner 
+// let h1 = document.querySelector("h1");
+// console.dir(h1);
+// let menu = document.querySelector("#menu");
+// menu.addEventListener("change", function (dets) {
+//    h1.textContent= `you Select ${dets.target.value}`;
+// });
+
+
+// // #keydown add even listner
+// let h1 = document.querySelector("h1");
+// window.addEventListener("keydown", function(dets){
+//     if (dets.key === " ") {
+//         h1.textContent="Space"
+//     }else{
+//         h1.textContent=dets.key
+//     }
+// })
 

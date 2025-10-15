@@ -57,3 +57,11 @@ html body{
     background-color: blueviolet;
     border-radius: 20px;
 }
+
+
+
+h1{
+    font-size: 500px;
+    font-weight: 200;
+    user-select: none;
+}
