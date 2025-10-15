@@ -570,3 +570,39 @@
 //     li.classList.add("highlight")
 // })
 // console.dir(itemlist);
+
+
+
+
+// // #click event change the font size 
+// let p = document.querySelector("p");
+// p.addEventListener("click", function changeText() {
+//   p.style.fontSize = "40px";
+// });
+
+
+// //#double click event change the background color
+// let doubleclick = function(){
+//     p.style.backgroundColor=("gray");
+//     p.style.color=("white");
+// };
+// let p = document.querySelector("p");
+// p.addEventListener("dblclick", doubleclick);
+
+
+
+
+let main = document.querySelector(".main");
+let insidemain = document.querySelector(".inside-main");
+let btnshowhide = document.querySelector(".show-hide-btn");
+
+btnshowhide.addEventListener("click", function showhide() {
+  // Toggle visibility
+  if (insidemain.style.display === "none") {
+    insidemain.style.display = "block";
+  } else {
+    insidemain.style.display = "none";
+  }
+});
+
+
