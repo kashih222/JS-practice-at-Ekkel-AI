@@ -466,6 +466,18 @@
 // console.log(min,"Minimum Number");
 
 
+// // #Print the even number on this array
+// let arr = [12, 17, 21, 10, 81, 100];
+// function Checker() {
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i]% 2==0) {
+//             console.log(arr[i]);
+//         }
+//     }
+// }
+// Checker();
+
+
 
 // // #Calculate the sum of all elements in an array.
 // let count = [10, 20,9, 11, 25]
@@ -479,16 +491,50 @@
 
 
 
-let word = "ili";
-function checkPalindrome() {
-    let myReverseVal = word.toString().split("").reverse().join("");
-    let myStringValue = word.toString();
-    console.log(myStringValue);
-    console.log( myReverseVal);
-    if(myReverseVal == myStringValue){
-        console.log("This Word is palindrome");
-    }else{
-        console.log("This word is not a plaindrome word");
-    }
-}
-checkPalindrome();
+// let word = "ili";
+// function checkPalindrome() {
+//     let myReverseVal = word.toString().split("").reverse().join("");
+//     let myStringValue = word.toString();
+//     console.log(myStringValue);
+//     console.log( myReverseVal);
+//     if(myReverseVal == myStringValue){
+//         console.log("This Word is palindrome");
+//     }else{
+//         console.log("This word is not a plaindrome word");
+//     }
+// }
+// checkPalindrome();
+
+
+
+// =====================================================================================>
+// =====================================================================================>
+
+// #DOM Manipulation
+let h1 =document.querySelector("h1");
+h1.innerText = "i am changes throgh DOM Manipulation";
+console.dir(h1);
+
+let p = document.querySelector("p");
+p.innerHTML="<h2>changes lorem to heading 2</h2>";
+
+let a = document.querySelector("a");
+a.href="https://github.com/kashih222";
+console.dir(a);
+
+
+let h3 = document.createElement("h3");
+h3.innerText="Hi am Created by js";
+console.log(h3);
+document.querySelector("body").prepend(h3);
+
+
+//h1 already selected above so i cannt redeclared.
+//add a class using js and add styling on this class
+h1.classList.toggle("heading");
+//using this we can remove the class.
+// h1.classList.remove("heading")
+
+
+
+
