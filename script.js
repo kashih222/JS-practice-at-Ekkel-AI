@@ -556,8 +556,17 @@
 
 
 
-// #Create & append element
-let h1 = document.createElement("h1");
-h1.innerText="i am example of append child"
-console.dir(h1);
-document.body.appendChild(h1);
+// // #Create & append element
+// let h1 = document.createElement("h1");
+// h1.innerText="i am example of append child"
+// console.dir(h1);
+// document.body.appendChild(h1);
+
+
+
+// // #add the class through js on the even nth child item under the ul
+// let itemlist = document.querySelectorAll("ul li:nth-child(2n)")
+// itemlist.forEach(li => {
+//     li.classList.add("highlight")
+// })
+// console.dir(itemlist);
