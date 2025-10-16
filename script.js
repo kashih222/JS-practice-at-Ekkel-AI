@@ -639,6 +639,9 @@
 let form = document.querySelector("form");
 let input = document.querySelectorAll("input");
 let main = document.querySelector(".main");
+let cursor = document.querySelector(".cursor");
+let cursor1 = document.querySelector(".cursor1");
+let cursor2 = document.querySelector(".cursor2");
     
 form.addEventListener("submit", function (dets) {
     dets.preventDefault();
@@ -681,3 +684,32 @@ form.addEventListener("submit", function (dets) {
         };
     });
 });
+
+
+
+form.addEventListener("mouseover", function (dets) {
+    form.style.backgroundColor = "rgba(49, 45, 44, 0.84)"
+    cursor2.style.scale="5"
+});
+
+form.addEventListener("mouseout", function (dets) {
+    form.style.backgroundColor = "rgb(49, 45, 44) "
+    cursor2.style.scale=""
+});
+
+
+
+
+window.addEventListener("mousemove", function (dets) {
+    console.log(dets.clientX,dets.clientY)
+     cursor.style.top = dets.clientY + "px";
+     cursor.style.left = dets.clientX + "px";
+     cursor1.style.top = dets.clientY + "px";
+     cursor1.style.left = dets.clientX + "px";
+     cursor2.style.top = dets.clientY + "px";
+     cursor2.style.left = dets.clientX + "px";
+     
+});
+
+
+

@@ -8,9 +8,8 @@ html body{
     height: 100vh;
     background-color: black;
     color: white;
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
+    cursor: none;
+   
 }
 
 .main{
@@ -84,5 +83,35 @@ form{
  form input{
     padding: 10px 25px;
     border-radius: 20px;
-    border: 1px solid burlywood;
+    border: 1px solid rgba(240, 7, 7, 0.788);
+    cursor: none;
  }
+
+.cursor{
+    width: 15px;
+    height: 15px;
+    background-color: rgb(225, 0, 225);
+    border-radius: 50%;
+    position: absolute;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+    /* gap: 100px; */
+    
+}
+.cursor1{
+    width: 10px;
+    height: 10px;
+    background-color: rgba(225, 0, 0, 0.911);
+    border-radius: 50%;
+    position: absolute;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+
+.cursor2{
+    width: 8px;
+    height: 8px;
+    background-color: rgba(0, 161, 225, 0.945);
+    border-radius: 50%;
+    position: absolute;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1.5s;
+}
+ 
