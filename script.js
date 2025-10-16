@@ -309,7 +309,7 @@
 // let count = 0
 // for (let i = 0; i < 51; i++) {
 //     if(i% 2===1){
-        
+
 //         count++;
 //     }
 // }
@@ -634,3 +634,50 @@
 //     }
 // })
 
+
+
+let form = document.querySelector("form");
+let input = document.querySelectorAll("input");
+let main = document.querySelector(".main");
+    
+form.addEventListener("submit", function (dets) {
+    dets.preventDefault();
+    console.log(dets);
+    console.log(input[0].value, input[1].value, input[2].value, input[3].value);
+
+    let insidemain = document.createElement("div");
+    insidemain.classList.add("inside-main");
+
+    let profile = document.createElement("div");
+    profile.classList.add("profile");
+
+    let img = document.createElement("img");
+    img.setAttribute("src", input[0].value);
+
+
+    let h1 = document.createElement("h1");
+    h1.textContent=input[1].value;
+    h1.classList.add("h1");
+
+    let h3 = document.createElement("h3");
+    h3.textContent=input[2].value;
+    h3.classList.add("h3");
+
+    let p = document.createElement("p");
+    p.textContent=input[3].value;
+    p.classList.add("p");
+
+    profile.appendChild(img);
+    insidemain.appendChild(profile);
+    insidemain.appendChild(h1);
+    insidemain.appendChild(h3);
+    insidemain.appendChild(p);
+    main.appendChild(insidemain);
+    
+
+    input.forEach(function (inp) {
+        if (inp.type !== "submit") {
+            inp.value = "";
+        };
+    });
+});
