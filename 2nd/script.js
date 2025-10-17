@@ -82,5 +82,26 @@ startbtn.addEventListener("click", function() {
 });
 
 
+// Local Storage
+localStorage.setItem("name","Kashaf");
+let nameget = localStorage.getItem("name")
+console.log(nameget)
+
+localStorage.removeItem("name");
+localStorage.setItem("age","24");
+let getdata = localStorage.getItem("age");
+console.log(getdata);
+
+localStorage.clear();
+console.log(localStorage)
+
+// Session Storage 
+sessionStorage.setItem("names","mkashaf");
+sessionStorage.setItem("accupation","Mern Developer");
+sessionStorage.removeItem("names");
+console.log(sessionStorage);
+sessionStorage.clear();
+console.log(sessionStorage);
+
 
 
