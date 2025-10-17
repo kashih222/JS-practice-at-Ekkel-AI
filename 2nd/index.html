@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>2nd Phase</title>
 </head>
+
 <body>
-    
-    <!-- toggle Practice using line through -->
+
+    <!-- toggle Practice using line through
      <h1>on Click Linethrough the li toggle preactice </h1>
     <nav>
         <ul>
@@ -22,19 +24,40 @@
 
     <hr><hr>
     <!-- live character counter -->
-     <div>
+    <!-- <div>
         Live Counter Accept only 20 Chracter
         <h1>Total Chracter : <span>0</span></h1>
         <textarea title="Accept only 20 Chracter" name="textare" id="textare"></textarea>
         <input type="submit" id="submit-btn">
      </div>
 
-     <hr><hr>
+     <hr><hr> -->
 
-     
+    <!-- form validation through js -->
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" id="email" placeholder="Enter your email" />
+                <div id="emailError" class="error-message">Invalid email</div>
+            </div>
 
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" />
+                <div id="passwordError" class="error-message">Password is required</div>
+            </div>
+
+            <button type="submit" class="btn">Login</button>
+        </form>
+        <div class="result">
+            
+        </div>
+    </div>
 
 
     <script src="script.js"></script>
 </body>
+
 </html>
