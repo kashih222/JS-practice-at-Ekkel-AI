@@ -1,85 +1,51 @@
- * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: "Poppins", sans-serif;
-    }
-
-    body {
+  body {
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
+      justify-content: center;
       height: 100vh;
-      background: linear-gradient(135deg, #74b9ff, #a29bfe);
-    }
-
-    .login-container {
-      background: #fff;
-      padding: 2rem 2.5rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      width: 100%;
-      max-width: 350px;
+      background: #f4f6fa;
+      font-family: Arial, sans-serif;
     }
 
     h2 {
-      text-align: center;
-      margin-bottom: 1.5rem;
-      color: #2d3436;
+      margin-bottom: 20px;
+      color: #333;
     }
 
-    .form-group {
-      margin-bottom: 1rem;
+    .progress-container {
+      width: 300px;
+      height: 20px;
+      background: #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
 
-    label {
-      display: block;
-      margin-bottom: 0.5rem;
-      font-weight: 600;
-      color: #2d3436;
+    .progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #4caf50, #81c784);
+      transition: width 0.3s ease;
     }
 
-    input {
-      width: 100%;
-      padding: 0.7rem;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 1rem;
-      transition: border 0.3s ease;
+    .progress-text {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #555;
     }
 
-    input:focus {
-      outline: none;
-      border-color: #0984e3;
-    }
-
-    .btn {
-      width: 100%;
-      padding: 0.75rem;
-      background: #0984e3;
-      color: #fff;
-      font-size: 1rem;
+    button {
+      margin-top: 20px;
+      padding: 8px 16px;
       border: none;
-      border-radius: 8px;
+      background-color: #4caf50;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
       cursor: pointer;
-      transition: background 0.3s ease;
     }
 
-    .btn:hover {
-      background: #74b9ff;
-    }
-
-    .error-message {
-      color: red;
-      font-size: 0.9rem;
-      margin-top: 0.5rem;
-      display: none; /* You can toggle this with JS */
-    }
- 
-    .result{
-        color: green;
-        font-size: 0.9rem;
-        margin-top: 0.5rem;
-        text-align: center;
-      
+    button:hover {
+      background-color: #45a049;
     }
