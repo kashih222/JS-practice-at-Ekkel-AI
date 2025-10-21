@@ -1,0 +1,362 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(98, 19, 129);
+    gap: 10px;
+    position: relative;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(121, 9, 165, 0.986);
+    color: white;
+    padding: 20px;
+    height: 400px;
+    width: 400px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 8px rgba(0, 0, 0, 0.342);
+    z-index:200;
+}
+
+/* Stack cards in the center of the container like a deck */
+.container { position: relative; }
+.container .card{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform .35s ease, opacity .35s ease;
+}
+
+/* Visual offsets using explicit classes assigned by JS */
+.container .card.is-top{ z-index: 300; transform: translate(-50%, -50%) scale(1); }
+.container .card.stack-1{ z-index: 200; transform: translate(-50%, -50%) translateY(18px) scale(.985); }
+.container .card.stack-2{ z-index: 150; transform: translate(-50%, -50%) translateY(36px) scale(.97); }
+
+/* Hide front content of non-top cards and show a backside panel via ::after */
+.container .card > *{ transition: opacity .25s ease; }
+.container .card:not(.is-top) > *{ opacity: 0; pointer-events: none; }
+.container .card::after{
+    content: "Back of card";
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(39,10,64,0.95), rgba(121,9,165,0.95));
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .35s ease;
+}
+.container .card:not(.is-top)::after{ opacity: 1; }
+
+/* Make sure the top card is interactive */
+.container .card.is-top > *{ opacity: 1; pointer-events: auto; }
+
+.image-div{
+    width: 100px;
+    height: 100px;
+    
+}
+/* delete button inside card */
+.delete-btn{
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(255,80,80,0.12);
+    color: #fff;
+    border: 1px solid rgba(255,80,80,0.25);
+    padding: 6px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 1001;
+    pointer-events: auto; /* allow clicking even when parent children are pointer-events:none */
+}
+.container .card:not(.is-top) .delete-btn{ opacity: 0.95; }
+
+/* ensure delete button sits above the backside overlay */
+.container .card::after{ z-index: 1000; }
+img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.name-cate{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.name{
+    font-size: 20px;
+    font-weight: bold;
+}
+.category{
+    font-size: 20px;
+    font-weight: bold; 
+    text-decoration: underline;
+}
+.call-reason{
+    width: 300px;;
+    letter-spacing: 4px;
+    overflow-wrap: break-word;
+
+    
+}
+.disc{
+    font-size: 16px;
+    width: 300px;
+    height: auto;
+    text-align: center;
+    overflow-wrap: break-word;
+
+    
+
+}
+.date-div{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end
+    ;
+}
+.date{
+    background-color: rgba(72, 6, 98, 0.142);
+    padding: 8px 15px;
+    border-radius: 10px;
+    color: white;
+    border: 1px solid rgba(72, 6, 98, 0.986);
+}
+
+
+
+.leftSide{
+    height: 400px;
+    width: 70px;
+    background-color: rgba(121, 9, 165, 0.986);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.534);
+}
+.plus{
+ height: 70px;   
+ width: 100%;
+ text-align: center;
+ cursor: pointer;
+}
+
+.arrowUp{
+     height: 70px;   
+     width: 100%;
+     text-align: center;
+     cursor: pointer;
+}
+.arrowDown{
+     height: 70px;   
+     width: 100%;
+     text-align: center;
+     cursor: pointer;
+}
+
+
+
+.rightSide{
+    height: 400px;
+    width: 70px;
+    background-color: rgba(121, 9, 165, 0.986);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.534);
+    margin-left: 410px;
+}
+
+.red{
+    background-color: red;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.green{
+    background-color: green;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.orange{
+    background-color: orange;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.yellow{
+    background-color: yellow;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.form-div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(92vw, 620px);
+    max-height: 90vh;
+    padding: 28px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.03), rgba(0,0,0,0.12));
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,0.06);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.02);
+    backdrop-filter: blur(8px) saturate(120%);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+    z-index: 9999;
+    color: #fff;
+}
+
+/* form layout */
+form{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    padding: 6px 4px 12px;
+}
+
+/* inputs & textarea */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+    width: 92%;
+    padding: 12px 18px;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.03);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.08);
+    outline: none;
+    transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+    font-size: 15px;
+}
+
+textarea{
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* placeholder color */
+input::placeholder,
+textarea::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+/* focus style */
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: rgba(0,200,120,0.9);
+    box-shadow: 0 6px 18px rgba(0,200,120,0.08);
+    transform: translateY(-2px);
+}
+
+/* radio group */
+.radio{
+    display: flex;
+    gap: 18px;
+    color: whitesmoke;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/* submit button */
+.submit{
+    padding: 10px 40px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(180deg, rgba(34,197,94,0.98), rgba(16,185,129,0.95));
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 8px 24px rgba(16,185,129,0.18);
+    transition: transform .12s ease, box-shadow .12s ease, opacity .12s ease;
+}
+
+.submit:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 14px 34px rgba(16,185,129,0.22);
+    opacity: 0.98;
+}
+
+/* close area and icon */
+.closs{
+    width: 100%;
+    text-align: right;
+    padding-right: 8px;
+    padding-bottom: 4px;
+    font-size: 28px;
+    color: rgba(255, 0, 0, 0.65);
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.closs-icon{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,0,0,0.22);
+    background: rgba(255,0,0,0.06);
+    transition: transform .14s ease,  .12s ease;
+}
+
+.closs-icon:hover{
+    transform: rotate(20deg) scale(1.03);
+    background: rgba(255,0,0,0.12);
+}
+

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Call Reminder</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="leftSide">
+            <div class="plus"><i class="fa-solid fa-plus"></i></div>
+            <div class="arrowUp"><i class="fa-solid fa-arrow-up"></i></div>
+            <div class="arrowDown"><i class="fa-solid fa-arrow-down"></i></div>
+        </div>
+
+        <!-- <div class="card">
+            <div class="image-div">
+                <img class="Image" src="https://images.unsplash.com/photo-1635805737707-575885ab0820?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3BpZGVybWFufGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=300"
+                    alt="Card-img">
+            </div>
+            <div class="name-cate">
+                <div class="name">KASHIH</div>
+                <div class="category">Urgent</div>
+            </div>
+            <div class="call-reason">
+                &quot<span class="callreason">To watch Spider-Man Home Coming</span>&quot
+            </div>
+            <div class="disc">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas sunt aperiam, molestias odio soluta ipsum
+                accusantium non sed rerum possimus.
+            </div>
+            <div class="date-div">
+                <input type="datetime-local" class="date">
+            </div>
+
+        </div> -->
+
+        <div class="rightSide">
+            <div class="green" title="Easy"></div>
+            <div class="orange" title="Little Urgent"></div>
+            <div class="yellow" title="Short is Short"></div>
+            <div class="red" title="Alrt"></div>
+        </div>
+        <div class="form-div">
+            <div class="closs"><i class="fa-solid fa-xmark closs-icon"></i></div>
+            <form id="myForm">
+                <input type="text" name="img_url" required placeholder="Enter Image URL">
+                <input type="text" name="name" required placeholder="Enter Name">
+                <input type="text" name="call_reason" required placeholder="Call Reason">
+                <input type="text" name="descr" required placeholder="Describe a Little">
+
+                <div class="radio">
+                    Choose category <br>
+                    <label for="urgent">Urgent</label>
+                    <input type="radio" name="category" id="urgent" value="Urgent" required>
+
+                    <label for="timeShort">Time Short</label>
+                    <input type="radio" name="category" id="timeShort" value="Time Short">
+
+                    <label for="easy">Easy</label>
+                    <input type="radio" name="category" id="easy" value="Easy">
+
+                    <label for="alert">Alert</label>
+                    <input type="radio" name="category" id="alert" value="Alert">
+                </div>
+
+                <input type="date" name="date" required class="date">
+                <input type="submit" class="submit" value="Submit">
+            </form>
+
+            
+
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
