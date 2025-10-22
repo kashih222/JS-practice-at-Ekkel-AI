@@ -1,0 +1,22 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(41, 41, 41);
+}
+
+button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.yellow{
+    background-color: rgb(230, 129, 14);
+}

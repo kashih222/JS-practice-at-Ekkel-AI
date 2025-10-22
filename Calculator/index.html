@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div class="h-screen w-[100%] bg-gray-800 text-white flex flex-col items-center justify-center">
+        <h1 class="mb-12 text-2xl font-bold">Wellcome yo Calculator!</h1>
+        <div class="calculator-div w-[350px] h-[600px]  flex flex-col items-center justify-between text-2xl border border-solid rounded-lg border-white p-6">
+            <input type="text" placeholder="0" class=" display w-[300px] p-[12px] rounded-lg outline-none text-black">
+            <div class="row1 flex item-center justify-center gap-5">
+                <button class="yellow">AC</button>
+                <button class="yellow">+/-</button>
+                <button class="yellow">%</button>
+                <button class="yellow">/</button>
+            </div>
+            <div class="row2 row1 flex item-center justify-center gap-5">
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button class="yellow">*</button>
+            </div>
+            <div class="row3 row1 flex item-center justify-center gap-5">
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button class="yellow">-</button>
+            </div>
+            <div class="row1 row1 flex item-center justify-center gap-5">
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button class="yellow">+</button>
+            </div>
+            <div class="row1 row1 flex item-center justify-center gap-5">
+                <button class="bg-gray-900">100</button>
+                <button>0</button>
+                <button>.</button>
+                <button class="yellow">=</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
